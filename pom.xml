@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.nextcentury</groupId>
+    <artifactId>herontest2023</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <geotools.version>15.1</geotools.version>
+    </properties>
+    
+    <dependencies>
+        
+        <!-- http://twitter.github.io/heron/api/ -->
+        <!-- https://github.com/twitter/heron/releases/ -->
+        <!-- https://mvnrepository.com/artifact/com.twitter.heron/heron-storm -->
+        <dependency>
+            <groupId>com.twitter.heron</groupId>
+            <artifactId>heron-storm</artifactId>
+            <version>0.17.5</version>
+        </dependency>        
+        
+
+        <!-- https://jersey.java.net/apidocs/1.19.1/jersey/index.html -->
+        <!--
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>1.19.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>1.19.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-core</artifactId>
+            <version>1.19.3</version>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>2.27</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>2.27</version>
+        </dependency>        
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-common</artifactId>
+            <version>2.27</version>
+        </dependency>    
+        <dependency>
+            <groupId>org.glassfish.jersey.inject</groupId>
+            <artifactId>jersey-hk2</artifactId>
+            <version>2.27</version>            
+        </dependency>            
+        
+        <!-- https://static.javadoc.io/com.google.code.gson/gson/2.8.0/index.html -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+                
+        <!-- https://github.com/xetorthio/jedis -->
+        <!-- http://xetorthio.github.io/jedis/ -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.9.0</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>        
+        
+  
+        <!-- spring -->
+        <!-- https://docs.spring.io/spring/docs/5.0.5.RELEASE/spring-framework-reference/ -->
+        <!-- https://springframework.guru/spring-framework-annotations/ -->
+        <!-- https://zeroturnaround.com/rebellabs/spring-framework-annotations-cheat-sheet/ -->
+        <!-- http://www.baeldung.com/spring-annotations-resource-inject-autowire -->
+        <!-- https://www.tutorialspoint.com/spring/spring_annotation_based_configuration.htm -->
+        <!-- http://www.topjavatutorial.com/frameworks/spring/spring-jdbc/spring-jdbc-using-annotation-based-configuration/ DAO/JDBC setup -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.0.5.RELEASE</version>
+        </dependency>
+        <!--not used
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.0.5.RELEASE</version>
+        </dependency>    
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.0.5.RELEASE</version>
+        </dependency>        
+        -->
+        <!-- not used
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jetty</artifactId>
+            <version>1.5.12.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>1.5.12.RELEASE</version>
+        </dependency>        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>1.5.12.RELEASE</version>
+        </dependency>
+        -->     
+        
+        
+        <!-- https://github.com/davidmoten/geo -->
+        <!-- http://davidmoten.github.io/geo/apidocs/index.html -->
+        <dependency>
+            <groupId>com.github.davidmoten</groupId>
+            <artifactId>geo</artifactId>
+            <version>0.7.1</version>
+        </dependency>
+                    
+                    
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <!--
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>26.0-jre</version>
+        </dependency>
+        -->            
+        
+        
+        <!-- http://docs.geotools.org/latest/javadocs/ -->
+        <!-- NOT YET USED
+        <dependency>
+            <groupId>com.vividsolutions</groupId>
+            <artifactId>jts</artifactId>
+            <version>1.13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-opengis</artifactId>
+            <version>${geotools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-api</artifactId>
+            <version>${geotools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-metadata</artifactId>
+            <version>${geotools.version}</version>
+        </dependency>                
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-referencing</artifactId>
+            <version>${geotools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-epsg-hsql</artifactId>
+            <version>${geotools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-epsg-extension</artifactId>
+            <version>${geotools.version}</version>
+        </dependency>
+        -->
+
+    </dependencies>
+    
+    <repositories>       
+        <repository>
+           <id>central.maven.org</id>
+           <name>Central Maven Repository</name>
+           <url>http://central.maven.org/maven2/</url>
+        </repository>  
+        <!--              
+        <repository>
+           <id>maven2-repository.dev.java.net</id>
+           <name>Java.net repository</name>
+           <url>http://download.java.net/maven/2</url>
+        </repository>
+        -->
+        <repository>
+           <id>osgeo</id>
+           <name>Open Source Geospatial Foundation Repository</name>
+           <url>http://download.osgeo.org/webdav/geotools/</url>
+        </repository>
+     </repositories>  
+       
+    <build>
+        <plugins>
+            <plugin>
+                <inherited>true</inherited>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>       
+            
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                  <archive>
+                    <manifest>
+                      <mainClass>fully.qualified.MainClass</mainClass>
+                    </manifest>
+                  </archive>
+                  <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                  </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                      <id>make-assembly</id> <!-- this is used for inheritance merges -->
+                      <phase>package</phase> <!-- bind to the packaging phase -->
+                      <goals>
+                        <goal>single</goal>
+                      </goals>
+                    </execution>
+                </executions>
+            </plugin> 
+        </plugins>
+        
+        
+    </build>
+    
+</project>
